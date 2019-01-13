@@ -1,7 +1,7 @@
 > 审计日志库是基于 MongoDB 实现的高性能日志记录组件，如果需要启用审计日志的话，需要集成本模块。
 
-NuGet 包名：HKAbp.Auditing.MongoDb
-NuGet 包地址：[NuGet 地址](https://www.nuget.org/packages/Abp.Auditing.MongoDb/4.1.0)
+NuGet 包名：HKAbp.Auditing.MongoDb  
+NuGet 包地址：[NuGet 地址](https://www.nuget.org/packages/Abp.Auditing.MongoDb/4.1.0)  
 NuGet 包版本：[![NuGet version](https://img.shields.io/badge/nuget-4.1.0-brightgreen.svg)](https://www.nuget.org/packages/Abp.Auditing.MongoDb/4.1.0)
 
 使用方法：
