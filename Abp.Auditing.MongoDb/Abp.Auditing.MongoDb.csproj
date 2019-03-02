@@ -7,15 +7,18 @@
         <NoWarn>1701;1702;1591;1723;1574;0618;0108;1723;1574</NoWarn>
         <PackageId>Abp.Auditing.MongoDb</PackageId>
         <PackageTags>asp.net core;abp;mongodb;auditing</PackageTags>
+        <PackageLicenseUrl>https://github.com/GameBelial/Abp.Auditing.MongoDb/blob/master/README.md</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/GameBelial/Abp.Auditing.MongoDb</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/GameBelial/Abp.Auditing.MongoDb</RepositoryUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Version>4.1.0</Version>
+        <Version>4.3.0</Version>
         <Authors>GameBelial(Zony)</Authors>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Abp" Version="4.1.0" />
-      <PackageReference Include="mongocsharpdriver" Version="2.7.2" />
+      <PackageReference Include="Abp" Version="4.3.0" />
+      <PackageReference Include="mongocsharpdriver" Version="2.7.3" />
     </ItemGroup>
 
 </Project>
