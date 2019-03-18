@@ -12,13 +12,13 @@
         <RepositoryUrl>https://github.com/GameBelial/Abp.Auditing.MongoDb</RepositoryUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Version>4.3.0</Version>
+        <Version>4.4.0</Version>
         <Authors>GameBelial(Zony)</Authors>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Abp" Version="4.3.0" />
-      <PackageReference Include="mongocsharpdriver" Version="2.7.3" />
+      <PackageReference Include="Abp" Version="4.4.0" />
+      <PackageReference Include="mongocsharpdriver" Version="2.8.0" />
     </ItemGroup>
 
 </Project>
