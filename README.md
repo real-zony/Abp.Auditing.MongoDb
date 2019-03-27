@@ -3,6 +3,7 @@
 NuGet 包名：HKAbp.Auditing.MongoDb  
 NuGet 包地址：[NuGet 地址](https://www.nuget.org/packages/Abp.Auditing.MongoDb/4.4.0)  
 NuGet 包版本：[![NuGet version](https://img.shields.io/badge/nuget-4.4.0-brightgreen.svg)](https://www.nuget.org/packages/Abp.Auditing.MongoDb/4.4.0)
+NuGet 包下载量：[![NuGet Downloads](https://img.shields.io/nuget/dt/Abp.Auditing.MongoDb.svg?style=flat-square)](https://www.nuget.org/stats/packages/Abp.Auditing.MongoDb?groupby=Version)
 
 使用方法：
 
