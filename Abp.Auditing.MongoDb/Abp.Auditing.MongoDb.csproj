@@ -17,7 +17,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Abp" Version="4.4.0" />
+      <PackageReference Include="Abp" Version="4.5.0" />
       <PackageReference Include="mongocsharpdriver" Version="2.8.0" />
     </ItemGroup>
 
