@@ -59,3 +59,8 @@ fabric.properties
 !.vscode/launch.json
 !.vscode/extensions.json
 
+./.idea
+/.idea
+
+Abp.Auditing.MongoDb/bin/*
+Abp.Auditing.MongoDb/obj/*

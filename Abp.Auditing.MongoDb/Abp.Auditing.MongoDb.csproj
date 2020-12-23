@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
         <AssemblyName>Abp.Auditing.MongoDb</AssemblyName>
         <RootNamespace>Abp.Auditing.MongoDb</RootNamespace>
         <NoWarn>1701;1702;1591;1723;1574;0618;0108;1723;1574</NoWarn>
@@ -12,13 +12,13 @@
         <RepositoryUrl>https://github.com/GameBelial/Abp.Auditing.MongoDb</RepositoryUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Version>4.4.0</Version>
+        <Version>6.1.1</Version>
         <Authors>GameBelial(Zony)</Authors>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Abp" Version="4.5.0" />
-      <PackageReference Include="mongocsharpdriver" Version="2.8.0" />
+        <PackageReference Include="Abp" Version="6.1.1"/>
+        <PackageReference Include="mongocsharpdriver" Version="2.11.5"/>
     </ItemGroup>
 
 </Project>

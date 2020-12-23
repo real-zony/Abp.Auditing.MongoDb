@@ -6,7 +6,7 @@ using Abp.UI;
 
 namespace Abp.Auditing.MongoDb
 {
-/// <summary>
+    /// <summary>
     /// 审计日志记录实体，仅用于 MongoDb 存储使用。
     /// </summary>
     public class MongoDbAuditEntity
@@ -50,7 +50,7 @@ namespace Abp.Auditing.MongoDb
         /// <see cref="CustomData"/> 属性的最大长度。
         /// </summary>
         public static int MaxCustomDataLength = 2000;
-        
+
         /// <summary>
         /// 调用接口时用户的编码，如果是匿名访问，则可能为 null。
         /// </summary>
@@ -95,7 +95,7 @@ namespace Abp.Auditing.MongoDb
         /// 调用接口时客户端的名称(通常为计算机名)。
         /// </summary>
         public string ClientName { get; set; }
-        
+
         /// <summary>
         /// 调用接口的浏览器信息。
         /// </summary>
@@ -120,7 +120,7 @@ namespace Abp.Auditing.MongoDb
         public static MongoDbAuditEntity CreateFromAuditInfo(AuditInfo auditInfo)
         {
             var expMsg = GetAbpClearException(auditInfo.Exception);
-            
+
             return new MongoDbAuditEntity
             {
                 UserCode = auditInfo.UserId?.ToString(),
@@ -137,7 +137,7 @@ namespace Abp.Auditing.MongoDb
                 CustomData = auditInfo.CustomData.TruncateWithPostfix(MaxCustomDataLength)
             };
         }
-        
+
         public override string ToString()
         {
             return string.Format(
@@ -145,7 +145,7 @@ namespace Abp.Auditing.MongoDb
                 ServiceName, MethodName, UserCode, ExecutionDuration, ClientIpAddress
             );
         }
-        
+
         /// <summary>
         /// 创建更加清楚明确的异常信息。
         /// </summary>
@@ -160,7 +160,7 @@ namespace Abp.Auditing.MongoDb
 
                 case AbpValidationException abpValidationException:
                     clearMessage = "异常为参数验证错误，一共有 " + abpValidationException.ValidationErrors.Count + "个错误:";
-                    foreach (var validationResult in abpValidationException.ValidationErrors) 
+                    foreach (var validationResult in abpValidationException.ValidationErrors)
                     {
                         var memberNames = "";
                         if (validationResult.MemberNames != null && validationResult.MemberNames.Any())
@@ -170,6 +170,7 @@ namespace Abp.Auditing.MongoDb
 
                         clearMessage += "\r\n" + validationResult.ErrorMessage + memberNames;
                     }
+
                     break;
 
                 case UserFriendlyException userFriendlyException:

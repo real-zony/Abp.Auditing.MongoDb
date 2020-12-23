@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Abp.Auditing.MongoDb.Configuration;
 using Abp.Auditing.MongoDb.Infrastructure;
-using MongoDB.Driver;
+using Abp.Threading;
 
 namespace Abp.Auditing.MongoDb
 {
@@ -27,6 +27,11 @@ namespace Abp.Auditing.MongoDb
                 .GetDatabase(_mongoDbConfiguration.DataBaseName)
                 .GetCollection<MongoDbAuditEntity>(typeof(MongoDbAuditEntity).Name)
                 .InsertOneAsync(entity);
+        }
+
+        public void Save(AuditInfo auditInfo)
+        {
+            AsyncHelper.RunSync(()=> SaveAsync(auditInfo));
         }
     }
 }
