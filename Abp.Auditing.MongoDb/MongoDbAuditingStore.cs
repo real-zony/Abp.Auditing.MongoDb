@@ -12,7 +12,7 @@ namespace Abp.Auditing.MongoDb
     {
         private readonly IMongoClientFactory _clientFactory;
         private readonly IAuditingMongoDbConfiguration _mongoDbConfiguration;
-        
+
         public MongoDbAuditingStore(IMongoClientFactory clientFactory, IAuditingMongoDbConfiguration mongoDbConfiguration)
         {
             _clientFactory = clientFactory;
@@ -22,16 +22,16 @@ namespace Abp.Auditing.MongoDb
         public async Task SaveAsync(AuditInfo auditInfo)
         {
             var entity = MongoDbAuditEntity.CreateFromAuditInfo(auditInfo);
-            
+
             await _clientFactory.Create()
                 .GetDatabase(_mongoDbConfiguration.DataBaseName)
-                .GetCollection<MongoDbAuditEntity>(typeof(MongoDbAuditEntity).Name)
+                .GetCollection<MongoDbAuditEntity>(nameof(MongoDbAuditEntity))
                 .InsertOneAsync(entity);
         }
 
         public void Save(AuditInfo auditInfo)
         {
-            AsyncHelper.RunSync(()=> SaveAsync(auditInfo));
+            AsyncHelper.RunSync(() => SaveAsync(auditInfo));
         }
     }
 }
